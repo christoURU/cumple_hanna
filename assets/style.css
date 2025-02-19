@@ -1,0 +1,102 @@
+.card {
+    position: relative;
+    background-color: #95986c;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #bbb082 0%, #F7F4F4 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #bbb082 0%, #F7F4F4 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .heading {
+    color:#D9D6C1;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  
+  .card p:not(.heading) {
+    font-size: 14px;
+  }
+  
+  .card p:last-child {
+    color: #D5B3A8;
+    font-weight: 600;
+  }
+  
+  .card:hover::after {
+    filter: blur(30px);
+  }
+  
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+  }
+
+  body{
+    color: #BBB082;
+    background-image: url('../assets/img/background.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .btn-primary{
+    background-color: #c0636d !important;
+    color: white !important;;
+  }
+
+  .btn-outline-primary{
+    background-color: white !important;
+    color: #c0636d !important;
+  }
+  
+  .btn-outline-primary:hover{
+    background-color: #c0636d !important;
+    color: white !important;;
+  }
+
+  li:hover{
+    transform: scale(1.08)
+  }
+
+  #menu{
+    color: #c0636d;
+  }
+  a{
+    color: #c0636d;
+    text-decoration: none;;
+  }
+
+  a:hover{
+    color: white;
+    background-color: #c0636d;
+    transform: scale(1.08);
+    text-decoration: none;;
+  }
+
+
+
